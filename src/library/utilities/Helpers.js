@@ -1,1 +1,1 @@
-export const getUserIdFromPath = () => window.location.pathname.split('/')[2]
+export const getUserIdFromPath = () => window.location.pathname.split('/').slice(-1).pop()
