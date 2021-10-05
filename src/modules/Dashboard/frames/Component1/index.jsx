@@ -1,5 +1,5 @@
 
-import { DashboardContext } from '../../DashboardContext';
+import { DashboardContext } from './../../dashboardContext';
 import React, { useContext } from 'react';
 import './styles.scss';
 

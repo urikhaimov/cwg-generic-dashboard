@@ -1,8 +1,10 @@
 import React, { lazy, Suspense } from "react";
-import DashboardModules from "../../library/common/constants/DashboardModules";
+import DashboardModules from "./dashboardModules";
 import data from '../../resources/mock/data.json';
-import { DashboardContext } from './DashboardContext'
+import { DashboardContext } from './dashboardContext'
 import './styles.scss';
+
+
 const Dashboard = (props) => {
     const user = data.find((e) => e.id === parseInt(props.match.params.id));
     const list = user ? user["dashboard-components"] : [];
