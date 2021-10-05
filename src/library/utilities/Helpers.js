@@ -1,0 +1,1 @@
+export const getUserIdFromPath = () => window.location.pathname.split('/')[2]

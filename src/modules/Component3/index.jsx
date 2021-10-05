@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { DashboardContext } from './../Dashboard/dashboardContext';
+import { UserContext } from '../../library/common/context/UserContext';
 import './styles.scss';
 
 const Comp3 = () => {
-  let context = useContext(DashboardContext);
+  let context = useContext(UserContext);
   return (<div className="comp3-container">Component 3
     {context.user.fullName}
   </div>);
