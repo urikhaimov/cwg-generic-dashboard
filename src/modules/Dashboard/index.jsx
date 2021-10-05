@@ -1,22 +1,17 @@
-import { UserContext } from "./../../library/common/context/UserContext";
-import React, { lazy, Suspense, useContext } from "react";
+import React, { lazy, Suspense} from "react";
 import './styles.scss';
 import { DashboardContext } from "./dashboardContext";
 import data from './../../resources/mock/data.json';
 
 const Dashboard = (props) => {
-    const context = useContext(UserContext);
     const id = props.match.params.id
     const user = data.find((e) => e.id === parseInt(id));
     const list = user ? user["dashboard-components"] : [];
 
     return (
         <DashboardContext.Provider value={{
-            ...context,
             user
         }}>
-
-
             <div>
                 <div className="title">Hello {user.fullName}  <a href='/'>back</a></div>
                 <div className="dashboard-grid">
