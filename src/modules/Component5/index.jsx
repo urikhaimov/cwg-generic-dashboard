@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { DashboardContext } from './../../dashboardContext';
+import { DashboardContext } from './../Dashboard/dashboardContext';
 import './styles.scss';
 const Comp5 = () => {
   let context = useContext(DashboardContext);

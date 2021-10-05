@@ -1,5 +1,4 @@
 import React, { lazy, Suspense } from "react";
-import DashboardModules from "./dashboardModules";
 import data from '../../resources/mock/data.json';
 import { DashboardContext } from './dashboardContext'
 import './styles.scss';
@@ -21,10 +20,9 @@ const Dashboard = (props) => {
                     }
                     {
                         list.map((c, i) => {
-                            const data = DashboardModules[c];
                             const Comp = lazy(() => {
-                                return new Promise(resolve => resolve(data)).then(
-                                    (data) => import(`${data.path}`));
+                                return new Promise(resolve => resolve(c)).then(
+                                    (c) => import(`../${c}`));
                             });
 
                             return (

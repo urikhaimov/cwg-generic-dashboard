@@ -2,18 +2,18 @@
     {
         "id": 1,
         "fullName" : "Uri Khaimov",
-        "dashboard-components" : ["Comp1", "Comp2", "Comp3", "Comp4"]
+        "dashboard-components" : ["Component1", "Component2", "Component3", "Component4"]
     },{
         "id": 2,
         "fullName" : "John Smith",
-        "dashboard-components" : ["Comp5", "Comp2", "Comp3", "Comp4"]
+        "dashboard-components" : ["Component5", "Component2", "Component3", "Module1"]
     },{
         "id": 3,
         "fullName" : "Phil Collins",
-        "dashboard-components" : ["Comp1", "Comp2", "Comp3", "Comp5"]
+        "dashboard-components" : ["Module1", "Component2", "Component3", "Component5"]
     },{
         "id": 4,
         "fullName" : "Barbara Streisand",
-        "dashboard-components" : ["Comp1", "Comp2", "Comp5", "Comp4"]
+        "dashboard-components" : ["Component1", "Component2", "Component5", "Componentonent4"]
     }
 ]
