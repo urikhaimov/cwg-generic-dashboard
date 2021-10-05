@@ -1,11 +1,9 @@
-import React, { useContext } from 'react';
-import { UserContext } from '../../library/common/context/UserContext';
+
+import React from 'react';
 import './styles.scss';
+
 const Comp5 = () => {
-  let context = useContext(UserContext);
-  return (<div className="comp5-container">Component 5
-    {context.user.fullName}
-  </div>);
+  return (<div className="comp5-container">Component 5</div>);
 };
 
 export default Comp5

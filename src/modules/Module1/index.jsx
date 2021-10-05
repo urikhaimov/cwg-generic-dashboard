@@ -1,13 +1,18 @@
-import React, { PureComponent } from 'react';
 
-class Module1 extends PureComponent {
-  render() {
-    return (
-      <>
-        <h1>Module1</h1>
-      </>
-    );
-  }
-}
+import { DashboardContext } from './../Dashboard/dashboardContext';
+import React, { useContext } from 'react';
+import './styles.scss';
+import { UserContext } from 'library/common/context/UserContext';
 
-export default Module1;
+const Module1 = () => {
+  const userContext = useContext(UserContext)
+  const dashboardContext = useContext(DashboardContext);
+  const userName = dashboardContext ? dashboardContext.user.fullName : '';
+  const title = userContext.title;
+  return (<div>
+    Module 1 {title} {userName}
+
+  </div>);
+};
+
+export default Module1
