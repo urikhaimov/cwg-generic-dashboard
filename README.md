@@ -73,9 +73,7 @@
   - utilities
     - Validators.js
     - Storage.js
-  - api - (optional folder as per requirement create this)
-    - AuthApiService.js
-```
+
 
 ---
 
