@@ -13,7 +13,7 @@ const Dashboard = (props) => {
             user
         }}>
             <div>
-                <div className="title">Hello {user.fullName}  <a href='/'>back</a></div>
+               
                 <div className="dashboard-grid">
                     {
                         list.length === 0 && <div> sorry there is no user</div>
