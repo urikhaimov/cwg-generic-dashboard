@@ -87,8 +87,7 @@
     - mixins.scss
   - fonts/
     - Roboto.ttf
-  - seed/
-    - country.json
+ 
 ```
 
 ---
