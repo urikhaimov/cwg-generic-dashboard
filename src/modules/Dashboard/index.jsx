@@ -1,19 +1,16 @@
-import React, { lazy, Suspense} from "react";
+import { UserContext } from "./../../library/common/context/UserContext";
+import React, { lazy, Suspense,useContext } from "react";
 import './styles.scss';
-import { DashboardContext } from "./dashboardContext";
-import data from './../../resources/mock/data.json';
+
 
 const Dashboard = (props) => {
-    const id = props.match.params.id
-    const user = data.find((e) => e.id === parseInt(id));
+    const context = useContext(UserContext)
+    const user = context.user;
     const list = user ? user["dashboard-components"] : [];
 
     return (
-        <DashboardContext.Provider value={{
-            user
-        }}>
             <div>
-               
+                <div className="title">Hello {user.fullName}  <a href='/'>back</a></div>
                 <div className="dashboard-grid">
                     {
                         list.length === 0 && <div> sorry there is no user</div>
@@ -34,7 +31,7 @@ const Dashboard = (props) => {
                             )
                         })
                     }
-                </div></div></DashboardContext.Provider>);
+                </div></div>);
 };
 
 
